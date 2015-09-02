@@ -34,7 +34,11 @@ def guess_check(secret_num, guess_array)
       puts "You got it!"
       break
     end
+    if count == 5
+      puts "Too bad! You fail!"
+    end
   end
 end
 
 guess_check(secret_num, guess_array)
+puts "The secret number was #{secret_num}"
