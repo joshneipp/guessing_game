@@ -5,7 +5,9 @@
 secret_num = rand(1..99)
 
 def guess_check(secret_num)
-    loop do
+  count = 0
+  while count < 5 do
+    count += 1
     puts "Number please: "
     human_guess = gets.chomp.to_i
     if human_guess < secret_num
