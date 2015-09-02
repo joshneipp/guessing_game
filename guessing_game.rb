@@ -2,9 +2,7 @@
 #chosen at random by the computer.
 
 secret_array = (1..99).to_a
-#secret_array.shuffle!
 secret_num = secret_array.shuffle.sample
-#secret_num = rand(1..99)
 guess_array = []
 
 def user_input
@@ -28,7 +26,6 @@ def compare(var1, var2)
   elsif var1 == var2
     return "You got it!"
   end
-
 end
 
 def guess_check(secret_num, guess_array)
