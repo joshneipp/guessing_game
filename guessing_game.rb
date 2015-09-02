@@ -4,12 +4,17 @@
 #Computer generates a secret number.
 secret_num = rand(1..99)
 
+def user_input
+  puts "Number please: "
+  gets.chomp.to_i
+end
+
+
 def guess_check(secret_num)
   count = 0
   while count < 5 do
     count += 1
-    puts "Number please: "
-    human_guess = gets.chomp.to_i
+    human_guess = user_input
     if human_guess < secret_num
       puts "That's too low."
     elsif human_guess > secret_num
